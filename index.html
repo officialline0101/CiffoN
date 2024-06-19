@@ -86,7 +86,7 @@
 <body>
     <div class="container">
         <h1>予約フォーム</h1>
-        <label for="date1">希望日時※必須<br>希望時間は30分刻みでお願いします。</label>
+        <label for="date1">希望日時※必須<br>希望時間は00分or30分でお願いします。</label>
         <input type="datetime-local" id="date1" step="1800" placeholder="タップして日時を入力">
 
         <label>新規orリピーター※必須</label>
@@ -161,7 +161,7 @@
                 phone,
                 visitCount,
                 selectedSymptom,
-                dates: [date1, date2, date3],
+                dates: [date1],
                 message
             };
 
