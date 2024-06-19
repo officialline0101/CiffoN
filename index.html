@@ -155,8 +155,6 @@
             const message = document.getElementById('message').value;
 
             const formData = {
-                name,
-                phone,
                 visitCount,
                 selectedSymptom,
                 dates: [date1],
@@ -166,7 +164,7 @@
             // LINEトークにメッセージを送信
             liff.sendMessages([{
                 type: 'text',
-                text: `【予約フォーム】\n希望日時：\n ${formData.dates[1]}\n新規orリピーター：${formData.visitCount}\nメニュー：${formData.selectedSymptom}\nメッセージ：${formData.message}`
+                text: `【予約フォーム】\n希望日時：\n ${formData.dates[0]}\n新規orリピーター：${formData.visitCount}\nメニュー：${formData.selectedSymptom}\nメッセージ：${formData.message}`
             }]).then(() => {
                 alert('当日キャンセルは無いようにお願いいたします。キャンセル料発生いたします。 ' );
                 // LIFFウィンドウを閉じる
